@@ -89,7 +89,7 @@ const Formulario = ({
   };
 
   const mostrarAlerta = () => {
-    Alert.alert("Error", "Todos los campos son obligatorios", [{ text: "OK" }]);
+    Alert.alert("Error", "Todos los campos son obligatorios {" + sintomas +"}", [{ text: "OK" }]);
   };
 
   return (
@@ -113,7 +113,7 @@ const Formulario = ({
           <Text style={styles.label}>Telefono contacto:</Text>
           <TextInput
             style={styles.input}
-            onChnageText={(texto) => guardarTelefono(texto)}
+            onChangeText={(texto) => guardarTelefono(texto)}
             keyboardType="numeric"
           />
         </View>
@@ -152,7 +152,7 @@ const Formulario = ({
           <TextInput
             multiline
             style={styles.input}
-            onChnageText={(texto) => guardarSintomas(texto)}
+            onChangeText={(texto) => guardarSintomas(texto)}
           />
         </View>
         <View>
